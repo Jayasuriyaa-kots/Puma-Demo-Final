@@ -1,4 +1,6 @@
 {
+  "name": "puma-email-processor",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "start": "node email-processor.js",
