@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "start": "node email-processor.js",
+    "start": "node email-injest.js",
     "worker": "node email-processor.js"
   },
   "dependencies": {
