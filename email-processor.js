@@ -402,7 +402,9 @@ function buildReply({
       if (status === "packed") return templates.order_packed(id);
       if (status === "delivered") return templates.order_delivered(id);
       if (status === "returned") return templates.order_returned(id);
-
+   if (status === "delivery failed" || status === "delivery_failed") {
+  return templates.delivery_attempt_failed(id);
+}
       return templates.order_shipped(id);
     }
 
