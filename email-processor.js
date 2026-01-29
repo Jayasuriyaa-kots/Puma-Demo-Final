@@ -209,25 +209,37 @@ Regards,<br>
 Puma Support
 `,
 
-  order_shipped: (id, link = "#") => `
+ order_shipped: (id) => `
 Hello,<br><br>
-Your order <b>${id}</b> is on the way! 🚚<br>
-You can track your package here: <a href="${link}">Track Order</a><br><br>
+Your order <b>${id}</b> has been shipped successfully. 🚚<br><br>
+
+<b>Tracking Number:</b> 10320323<br>
+You can track your shipment using our courier partner link below:<br>
+<a href="https://courier-demo.puma.com/track/10320323">Track Your Order</a><br><br>
+
+If you need any further assistance, feel free to reply to this email.<br><br>
+
 Regards,<br>
 Puma Support
 `,
+
 
 delivery_attempt_failed: (id) => `
 Hello,<br><br>
-We noticed a delivery attempt was not successful for your order <b>${id}</b>.<br>
+We noticed that a delivery attempt was not successful for your order <b>${id}</b>.<br><br>
+
 Our courier partner will attempt delivery again on the next business day.<br>
 Kindly ensure someone is available to receive the package.<br><br>
 
-<b>Tracking Number:</b> PUMA-TRK-90034<br><br>
+Please use the link below to track your order in the meanwhile:<br>
+<a href="https://courier-demo.puma.com/track/90034">Track Your Order</a><br><br>
+
+Additionally, our support assistant will guide you shortly to ensure successful delivery.<br><br>
 
 Regards,<br>
 Puma Support
 `,
+
 
 
   order_delivered: (id) => `
@@ -313,13 +325,23 @@ Puma Support
 `,
 
   // --- 7. Risk / Other ---
-  high_risk_escalation: () => `
+ high_risk_escalation: (id, arn = "ARN123456789") => `
 Hello,<br><br>
-Thank you for reaching out. Your email has been flagged for prioritized review.<br>
-A senior support specialist will review your concern and contact you shortly.<br><br>
+Thank you for reaching out to us.<br><br>
+
+We have located the order <b>${id}</b> associated with your email.  
+Our records confirm that the refund has already been <b>processed successfully</b>.<br><br>
+
+<b>Refund Reference / ARN:</b> ${arn}<br><br>
+
+We request you to kindly check with your bank using the above reference number, as banks may take some time to reflect the amount.<br><br>
+
+If the amount is still not visible, please reply to this email and we will assist you further.<br><br>
+
 Regards,<br>
 Puma Support
 `,
+
 
   unclear_intent: () => `
 Hello,<br><br>
