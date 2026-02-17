@@ -10,7 +10,7 @@ const CLIENT_SECRET = "o~k8Q~PdbqWFkGMy898zFq5bE_gyaFzWHdWy3dt2"; // ROTATE THIS
 
 const MAILBOX = "support@puma.quantaops.com";
 
-const API_ENDPOINT = "https://puma-backend-demo.up.railway.app/email-inbox";
+const API_ENDPOINT = "https://puma-backend-demo.up.railway.app/email-inbox".trim();
 
 /* -------------------------
    MICROSOFT GRAPH
