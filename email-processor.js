@@ -13,7 +13,7 @@ const MAILBOX = "support@puma.quantaops.com";
 
 // Backend API URL (default to localhost if not set)
 const API_URL =
-  process.env.API_URL || "puma-backend-demo-production-6d02.up.railway.app";
+  process.env.API_URL || "puma-backend-demo.up.railway.app";
 
 /* -------------------------
    API HELPERS
