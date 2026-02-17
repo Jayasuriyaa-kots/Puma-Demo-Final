@@ -10,8 +10,7 @@ const CLIENT_SECRET = "o~k8Q~PdbqWFkGMy898zFq5bE_gyaFzWHdWy3dt2"; // ROTATE THIS
 
 const MAILBOX = "support@puma.quantaops.com";
 
-const API_ENDPOINT =
-  "https://puma-backend-demo-production-6d02.up.railway.app/email-inbox";
+const API_ENDPOINT = "https://puma-backend-demo-production-6d02.up.railway.app/email-inbox";
 
 /* -------------------------
    MICROSOFT GRAPH
@@ -83,6 +82,16 @@ async function sendEmailToAPI(mail) {
 
     raw_payload: mail,
   };
+console.log("API_ENDPOINT =", JSON.stringify(API_ENDPOINT));
+console.log("payload.from_email =", payload.from_email);
+console.log("payload.to_email =", payload.to_email);
+
+try {
+  new URL(API_ENDPOINT);
+  console.log("✅ API_ENDPOINT valid");
+} catch (e) {
+  console.log("❌ API_ENDPOINT invalid:", e.message);
+}
 
   const res = await fetch(API_ENDPOINT, {
     method: "POST",
